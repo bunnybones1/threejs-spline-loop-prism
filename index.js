@@ -11,6 +11,12 @@ function SplineLoopPrism(splineLoopInnerTop, splineLoopInnerBottom, splineLoopOu
 		splineLoopOuterTop,
 		splineLoopOuterBottom
 	]
+	var points = this.points = [];
+	for(var iSpline = 0; iSpline < this.splineLoops.length; iSpline++) {
+		for(var iPoint = 0; iPoint < this.splineLoops[iSpline].points.length; iPoint++) {
+			points.push(this.splineLoops[iSpline].points[iPoint]);
+		}
+	}
 }
 
 SplineLoopPrism.prototype = {
